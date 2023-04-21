@@ -57,16 +57,17 @@ const Tags = () => {
     }
   return (
     <div>
-      <div className="mx-20 text-3xl text-white rounded-full text-center py-20 border-solid border-2 border-purple-900">
+      <div className="mt-12 my-20 mx-20 text-3xl text-white rounded-full text-center py-20 border-solid border-2 border-purple-900">
         {time()}
       </div>
-      <div className="text-center mt-5 mx-3">
+      <div className="text-center mt-6 ">
       { isTimerRunning ? 
         (<>
-    <button className=" text-blue-500 bg-white rounded-lg px-10 font-bold text-xl py-1  hover:bg-purple-900 hover:text-white " onClick={handlePause}>{isPause ? "Start" : "Pause"}</button>
+    <button className=" text-blue-500 bg-white rounded-lg px-8 font-bold text-xl py-1  hover:bg-purple-900 hover:text-white " onClick={handlePause}>{isPause ? "Start" : "Pause"}</button>
     <button className="text-blue-500 bg-white rounded-lg px-10 font-bold text-xl py-1  ml-3 hover:bg-purple-900 hover:text-white " onClick={handleReset}>Reset</button>
     </>) :
        ( <> 
+       <div className="mx-5">
     <button
           onClick={() => {
             handleTimer(1500);
@@ -79,7 +80,7 @@ const Tags = () => {
           onClick={() => {
             handleTimer(300);
           }}
-          className="text-blue-500 bg-white ml-2 rounded-lg font-bold py-1 text-xl px-9 hover:bg-purple-900 hover:text-white "
+          className="text-blue-500 bg-white ml-2 rounded-lg font-bold py-1 text-xl px-6 hover:bg-purple-900 hover:text-white "
         >
           Short Break
         </button>
@@ -87,10 +88,11 @@ const Tags = () => {
           onClick={() => {
             handleTimer(900);
           }}
-          className="text-blue-500 bg-white ml-2 rounded-lg font-bold px-9 py-1 text-xl mt-2 hover:bg-purple-900 hover:text-white "
+          className="text-blue-500 bg-white ml-2 rounded-lg font-bold px-6 py-1 text-xl mt-2 hover:bg-purple-900 hover:text-white "
         >
           Long Break
         </button>
+        </div>
   </>)}
     </div>
     </div>
