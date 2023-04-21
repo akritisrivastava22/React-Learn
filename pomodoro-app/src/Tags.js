@@ -10,7 +10,7 @@ const Tags = () => {
     setTimer(seconds);
     setIsTimerRunning(true);
     if (timer === 0) {
-        console.log("Prateeeeeeeeeeeeek");
+        
         clearInterval(myInterval);
         return ;
     }
@@ -57,21 +57,21 @@ const Tags = () => {
     }
   return (
     <div>
-      <div className="text-white text-center">
+      <div className="mx-20 text-3xl text-white rounded-full text-center py-20 border-solid border-2 border-purple-900">
         {time()}
       </div>
-      <div className="text-center mt-3">
+      <div className="text-center mt-5 mx-3">
       { isTimerRunning ? 
         (<>
-    <button className="bg-white rounded-lg px-10" onClick={handlePause}>{isPause ? "Start" : "Pause"}</button>
-    <button className="bg-white rounded-lg px-10 ml-3" onClick={handleReset}>Rest</button>
+    <button className=" text-blue-500 bg-white rounded-lg px-10 font-bold text-xl py-1  hover:bg-purple-900 hover:text-white " onClick={handlePause}>{isPause ? "Start" : "Pause"}</button>
+    <button className="text-blue-500 bg-white rounded-lg px-10 font-bold text-xl py-1  ml-3 hover:bg-purple-900 hover:text-white " onClick={handleReset}>Reset</button>
     </>) :
        ( <> 
     <button
           onClick={() => {
             handleTimer(1500);
           }}
-          className="bg-white rounded-lg px-10"
+          className="text-blue-500 bg-white rounded-lg px-12 font-bold text-xl py-1 hover:bg-purple-900 hover:text-white "
         >
           Work
         </button>
@@ -79,7 +79,7 @@ const Tags = () => {
           onClick={() => {
             handleTimer(300);
           }}
-          className="bg-white ml-2 rounded-lg px-10 "
+          className="text-blue-500 bg-white ml-2 rounded-lg font-bold py-1 text-xl px-9 hover:bg-purple-900 hover:text-white "
         >
           Short Break
         </button>
@@ -87,7 +87,7 @@ const Tags = () => {
           onClick={() => {
             handleTimer(900);
           }}
-          className="bg-white ml-2 rounded-lg px-10"
+          className="text-blue-500 bg-white ml-2 rounded-lg font-bold px-9 py-1 text-xl mt-2 hover:bg-purple-900 hover:text-white "
         >
           Long Break
         </button>
